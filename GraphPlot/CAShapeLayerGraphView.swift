@@ -28,9 +28,17 @@ class CAShapeLayerGraphView: UIView {
         switch color {
         case .purple:
             purplePath = pathByAppendings(point: point, to: purplePath)
+            animate(layer: purpleLayer)
         case .green:
             greenPath = pathByAppendings(point: point, to: greenPath)
+            animate(layer: greenLayer)
         }
+    }
+    
+    private func animate(layer: CALayer) {
+        let animation = CABasicAnimation(keyPath: "path")
+        animation.duration = 0.5
+        layer.add(animation, forKey: "pathAnimation")
     }
     
     private func pathByAppendings(point: CGPoint, to path: UIBezierPath?) -> UIBezierPath {
