@@ -13,6 +13,7 @@
 		284A9E3723BEAFB000FF9272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284A9E3523BEAFB000FF9272 /* Main.storyboard */; };
 		284A9E3923BEAFB200FF9272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284A9E3823BEAFB200FF9272 /* Assets.xcassets */; };
 		284A9E3C23BEAFB200FF9272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284A9E3A23BEAFB200FF9272 /* LaunchScreen.storyboard */; };
+		284A9E4423BEAFCE00FF9272 /* CAShapeLayerGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284A9E4323BEAFCE00FF9272 /* CAShapeLayerGraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		284A9E3823BEAFB200FF9272 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		284A9E3B23BEAFB200FF9272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		284A9E3D23BEAFB200FF9272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		284A9E4323BEAFCE00FF9272 /* CAShapeLayerGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAShapeLayerGraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				284A9E2F23BEAFB000FF9272 /* AppDelegate.swift */,
+				284A9E3823BEAFB200FF9272 /* Assets.xcassets */,
+				284A9E4323BEAFCE00FF9272 /* CAShapeLayerGraphView.swift */,
+				284A9E3D23BEAFB200FF9272 /* Info.plist */,
+				284A9E3A23BEAFB200FF9272 /* LaunchScreen.storyboard */,
+				284A9E3523BEAFB000FF9272 /* Main.storyboard */,
 				284A9E3123BEAFB000FF9272 /* SceneDelegate.swift */,
 				284A9E3323BEAFB000FF9272 /* ViewController.swift */,
-				284A9E3523BEAFB000FF9272 /* Main.storyboard */,
-				284A9E3823BEAFB200FF9272 /* Assets.xcassets */,
-				284A9E3A23BEAFB200FF9272 /* LaunchScreen.storyboard */,
-				284A9E3D23BEAFB200FF9272 /* Info.plist */,
 			);
 			path = GraphPlot;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				284A9E3423BEAFB000FF9272 /* ViewController.swift in Sources */,
+				284A9E4423BEAFCE00FF9272 /* CAShapeLayerGraphView.swift in Sources */,
 				284A9E3023BEAFB000FF9272 /* AppDelegate.swift in Sources */,
 				284A9E3223BEAFB000FF9272 /* SceneDelegate.swift in Sources */,
 			);

@@ -9,10 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet private weak var graphView: CAShapeLayerGraphView!
+    
+    private var y: CGFloat = 0
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+                
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] (_) in
+            guard let self = self else { return }
+            
+            self.graphView.add(point: CGPoint(x: CGFloat.random(in: 0...25), y: self.y), to: .purple)
+            self.graphView.add(point: CGPoint(x: CGFloat.random(in: 0...25), y: self.y), to: .green)
+            
+            self.y += 10
+        }
     }
 
 

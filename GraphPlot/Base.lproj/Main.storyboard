@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,49 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GraphPlot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ico-Dg-zqq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOX-RJ-i91" customClass="CAShapeLayerGraphView" customModule="GraphPlot" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="Xvg-sc-9gC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nOX-RJ-i91" firstAttribute="bottom" secondItem="vKm-ee-9Eg" secondAttribute="bottom" id="CaA-jS-OqC"/>
+                                    <constraint firstItem="nOX-RJ-i91" firstAttribute="trailing" secondItem="vKm-ee-9Eg" secondAttribute="trailing" id="DKC-1o-HD2"/>
+                                    <constraint firstItem="nOX-RJ-i91" firstAttribute="width" secondItem="Lq9-8T-baU" secondAttribute="width" id="JJE-PM-PjV"/>
+                                    <constraint firstItem="nOX-RJ-i91" firstAttribute="top" secondItem="vKm-ee-9Eg" secondAttribute="top" id="jei-CH-wHA"/>
+                                    <constraint firstItem="nOX-RJ-i91" firstAttribute="leading" secondItem="vKm-ee-9Eg" secondAttribute="leading" id="rmw-Nn-PWg"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="vKm-ee-9Eg"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Lq9-8T-baU"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ico-Dg-zqq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Dvi-Lh-Me3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ico-Dg-zqq" secondAttribute="bottom" id="bN3-XZ-l59"/>
+                            <constraint firstItem="ico-Dg-zqq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pDc-GK-gEV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ico-Dg-zqq" secondAttribute="trailing" id="wwx-ZK-SoT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="graphView" destination="nOX-RJ-i91" id="BnE-Ey-b9q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="110"/>
         </scene>
     </scenes>
 </document>
