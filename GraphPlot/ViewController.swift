@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
                 
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] (_) in
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] (_) in
             guard let self = self else { return }
             
             self.graphView.add(point: CGPoint(x: CGFloat.random(in: 0...25), y: self.y), to: .purple)
